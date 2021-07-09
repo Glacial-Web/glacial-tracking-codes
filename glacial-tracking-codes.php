@@ -18,11 +18,9 @@ function glacial_tracking_acf_notice() { ?>
     <div class="notice notice-error">
         <p>Please install Advanced Custom Fields Pro, it is required for Glacial Tracking Codes plugin to work.</p>
     </div>
-	<?php
-}
+<?php }
 
 if ( ! function_exists( 'the_field' ) ) {
-
 	add_action( 'admin_notices', 'glacial_tracking_acf_notice' );
 
 } else {
