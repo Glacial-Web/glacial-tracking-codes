@@ -39,14 +39,14 @@ if ( ! function_exists( 'the_field' ) ) {
 		  'menu_slug'  => 'glacial-tracking-codes',
 		  'capability' => 'edit_posts',
 		  'icon_url'   => 'dashicons-chart-line',
-		  'redirect' => false
+		  'redirect'   => false
 		) );
 	}
 
-	function glacial_tracking_codes_json_save_point( $glacf_path ) {
-		$glacf_path = plugin_dir_path( __FILE__ ) . '/acf-admin';
+	function glacial_tracking_codes_json_save_point( $path ) {
+		$path = plugin_dir_path( __FILE__ ) . '/acf-admin';
 
-		return $glacf_path;
+		return $path;
 	}
 
 	// Load ACF JSON
@@ -70,7 +70,7 @@ if ( ! function_exists( 'the_field' ) ) {
 			$fields = get_field( 'tracking_codes_by_page', 'options' );
 
 			foreach ( $fields as $field ) {
-				if ( is_page( $field['pages'] ) ) {
+				if ( in_array( get_the_ID(), $field['pages'] ) ) {
 					echo $field['code'];
 				}
 			}
