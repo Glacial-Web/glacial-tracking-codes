@@ -15,7 +15,6 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-
 function glacial_tracking_acf_notice() { ?>
     <div class="notice notice-error">
         <p>Please install Advanced Custom Fields Pro, it is required for Glacial Tracking Codes plugin to work.</p>
@@ -41,7 +40,6 @@ if ( ! function_exists( 'the_field' ) ) {
 		  'menu_slug'  => 'glacial-tracking-codes',
 		  'capability' => 'edit_posts',
 		  'icon_url'   => 'dashicons-chart-line',
-
 		  'redirect' => false
 		) );
 	}
