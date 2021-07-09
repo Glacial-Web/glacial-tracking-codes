@@ -1,7 +1,6 @@
 <?php
 /**
  * Plugin Name:     Glacial Tracking Codes
- * Plugin URI:      https://glacial.com
  * Description:     Adds tracking codes to site or individual pages
  * Author:          Glacial Multimedia
  * Author URI:      https://glacial.com
@@ -10,7 +9,7 @@
  * @package         Glacial_Tracking_Codes
  */
 
-// If this file is called directly, abort.
+// If this file is called directly, DIE!!.
 if ( ! defined( 'WPINC' ) ) {
 	die;
 }
